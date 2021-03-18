@@ -14,6 +14,9 @@ namespace SalesManagement.BL
         private string categoryName;
         private string description;
 
+        public Category()
+        {
+        }
         public Category(string categoryId, string categoryName, string description)
         {
             this.CategoryId = categoryId;
@@ -44,8 +47,6 @@ namespace SalesManagement.BL
 
         public static int AddCategory(ArrayList lst)
         {
-
-
             return CategoryDAL.AddCategory(lst);
         }
 
