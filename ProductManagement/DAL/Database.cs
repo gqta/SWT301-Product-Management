@@ -9,9 +9,9 @@ using System.Configuration;
 
 namespace SalesManagement.DAL
 {
-    class Database
+    public class Database
     {
-        public public static SqlConnection GetConnection()
+        public static SqlConnection GetConnection()
         {
             string strCon = ConfigurationManager.ConnectionStrings["ProductDB"].ToString();
             return new SqlConnection(strCon);
