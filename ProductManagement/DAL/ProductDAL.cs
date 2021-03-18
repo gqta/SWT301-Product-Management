@@ -8,7 +8,7 @@ using SalesManagement.BL;
 
 namespace SalesManagement.DAL
 {
-    class ProductDAL
+    public class ProductDAL
     {
         public static DataTable getAllProducts()
         {

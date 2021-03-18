@@ -9,7 +9,7 @@ using SalesManagement.BL;
 
 namespace SalesManagement.DAL
 {
-    class CategoryDAL
+    public class CategoryDAL
     {
         public static DataTable GetAllCategory()
         {

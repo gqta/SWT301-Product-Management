@@ -11,7 +11,7 @@ namespace SalesManagement.DAL
 {
     class Database
     {
-        public static SqlConnection GetConnection()
+        public public static SqlConnection GetConnection()
         {
             string strCon = ConfigurationManager.ConnectionStrings["ProductDB"].ToString();
             return new SqlConnection(strCon);

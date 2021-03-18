@@ -8,7 +8,7 @@ using SalesManagement.DAL;
 
 namespace SalesManagement.BL
 {
-    class Category
+    public class Category
     {
         private string categoryId;
         private string categoryName;

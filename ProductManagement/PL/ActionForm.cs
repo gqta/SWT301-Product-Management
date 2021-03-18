@@ -8,7 +8,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using SalesManagement.BL;
-using SalesManagement.BL;
 
 namespace SalesManagement.PL
 {

@@ -7,7 +7,7 @@ using SalesManagement.DAL;
 
 namespace SalesManagement.BL
 {
-    class Product
+    public class Product
     {
         private string id;
         private string name;
