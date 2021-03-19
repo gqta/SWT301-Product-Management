@@ -18,6 +18,10 @@ namespace SalesManagement.BL
         private bool discontinued;
         private DateTime date;
 
+        public Product()
+        {
+        }
+
         public Product(string id, string name, string category, string unit, int price, int quantity, bool discontinued, DateTime date)
         {
             this.Id = id;
