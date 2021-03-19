@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 using SalesManagement.BL;
 using System;
 using System.Collections.Generic;
@@ -59,6 +60,13 @@ namespace Product_Unit_Test.BL
             cat.Description = description;
 
             Assert.AreEqual(cat.Description, description);
+        }
+
+        [TestCase]
+        public void TC05_GetAllCategory()
+        {
+            Assert.IsTrue(Category.GetAllCategory().Count >= 0);
+
         }
 
     }
