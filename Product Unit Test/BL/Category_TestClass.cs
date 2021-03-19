@@ -12,26 +12,23 @@ namespace Product_Unit_Test.BL
     class Category_TestClass
     {
         [TestCase("C0001", "Mouse", "Amazing")]
-        [TestCase("C0004", "PC", "Good")]      
-        [TestCase("C0006","HD",1)]
+        [TestCase("", "", "")]
+        [TestCase(null, null, null)]
 
         public void TC01_Constructor_InitConstructor(string categoryId, string categoryName, string description)
         {
+            Category cat = new Category(categoryId, categoryName, description);
 
-            Assert.Throws<ArgumentException>(() =>
-            {
-                Category cat = new Category(categoryId, categoryName, description);
+            Assert.AreEqual(cat.CategoryId, categoryId);
+            Assert.AreEqual(cat.CategoryName, categoryName);
+            Assert.AreEqual(cat.Description, description);
 
-                Assert.AreEqual(cat.CategoryId, categoryId);
-                Assert.AreEqual(cat.CategoryName, categoryName);
-                Assert.AreEqual(cat.Description, description);
-            });
-                
+
         }
 
         [TestCase("C0001")]
-        [TestCase("C0008")]
-        [TestCase("D0008")]
+        [TestCase("")]
+        [TestCase(null)]
 
         public void TC02_CategoryId_SetterAndGetter(string categoryid)
         {
@@ -42,8 +39,9 @@ namespace Product_Unit_Test.BL
 
         }
 
-        [TestCase("HD")]
-        [TestCase("SD")]
+        [TestCase("C0001")]
+        [TestCase("")]
+        [TestCase(null)]
         public void TC03_CategoryName_SetterAndGetter(string categoryName)
         {
             Category cat = new Category();
@@ -52,8 +50,9 @@ namespace Product_Unit_Test.BL
             Assert.AreEqual(cat.CategoryName, categoryName);
         }
 
-        [TestCase("normal")]
-        [TestCase("commonly")]
+        [TestCase("C0001")]
+        [TestCase("")]
+        [TestCase(null)]
         public void TC04_CategoryDescription_SetterAndGetter(string description)
         {
             Category cat = new Category();
